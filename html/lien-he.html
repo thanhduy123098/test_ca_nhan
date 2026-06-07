@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ - PHỤ KIỆN DUY THÀNH</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="container header-container">
+        <div class="logo-box">
+            <a href="../index.html">
+                <img src="../assets/logo.png" alt="PHỤ KIỆN DUY THÀNH LOGO" class="logo">
+                <h1 class="shop-name">PHỤ KIỆN DUY THÀNH</h1>
+            </a>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Bạn cần tìm linh kiện gì?">
+            <button class="btn-search">
+                Tìm kiếm
+            </button>
+        </div>
+    </div>
+</header>
+
+    <nav class="main-nav">
+        <ul class="nav-links">
+            <li><a href="../index.html">Trang Chủ</a></li>
+            <li><a href="san-pham.html">Sản Phẩm</a></li>
+            <li><a href="gioi-thieu.html">Về chúng tôi</a></li>
+            <li><a href="lien-he.html" class="active">Liên Hệ</a></li>
+            <li><a href="#" onclick="kiemTraAdmin()">Quản Lý (Admin)</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h2 style="margin-bottom: 20px; color: #1e293b;">Liên Hệ Với Chúng Tôi</h2>
+        
+        <div class="contact-layout">
+            <div class="contact-info">
+                <h3>PHỤ KIỆN DUY THÀNH</h3>
+                <p style="margin-bottom: 10px;">📍 <strong>Địa chỉ:</strong> Số 153, Dương Quang Đông, Khóm 3, Phường Hòa Thuận, Vĩnh Long</p>
+                <p style="margin-bottom: 10px;">📞 <strong>Hotline:</strong> 0846623306 (Zalo hỗ trợ thợ)</p>
+                <p style="margin-bottom: 10px;">✉️ <strong>Email:</strong> thanhduy9693@gmail.com</p>
+                <p style="margin-bottom: 10px;">⏰ <strong>Giờ làm việc:</strong> 08:00 - 18:00 (Thứ 2 - Thứ Bảy)</p>
+            </div>
+
+            <div>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="hoTen">Họ và tên (*)</label>
+                        <input type="text" id="hoTen" placeholder="Nhập họ và tên của bạn">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email (*)</label>
+                        <input type="text" id="email" placeholder="Ví dụ: nguyenvan@gmail.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="soDienThoai">Số điện thoại (*)</label>
+                        <input type="text" id="soDienThoai" placeholder="Nhập số điện thoại liên hệ">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loaiTuVan">Loại linh kiện cần tư vấn</label>
+                        <select id="loaiTuVan">
+                            <option value="">-- Chọn loại linh kiện --</option>
+                            <option value="man-hinh">Màn hình</option>
+                            <option value="pin">Pin</option>
+                            <option value="phu-kien">Phụ kiện (Sạc, Cáp, Ốp)</option>
+                            <option value="khac">Khác</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loiNhan">Nội dung lời nhắn (*)</label>
+                        <textarea id="loiNhan" placeholder="Nhập nội dung bạn cần hỗ trợ..."></textarea>
+                    </div>
+
+                    <div id="formMessage" style="margin-bottom: 15px; font-weight: bold; display: none;"></div>
+
+                    <button type="submit" class="btn">Gửi liên hệ</button>
+                </form>
+            </div>
+        </div>
+    </main>
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-brand-col">
+            <h3 class="footer-logo-text">PHỤ KIỆN DUY THÀNH</h3>
+            <p class="footer-slogan">Chuyên cung cấp linh kiện & phụ kiện điện thoại chính hãng. Đặt chất lượng và uy tín lên hàng đầu.</p>
+            <div class="social-links">
+                <a href="#" title="Facebook">FB</a>
+                <a href="#" title="Zalo">ZL</a>
+                <a href="#" title="Instagram">IG</a>
+                <a href="#" title="TikTok">TT</a>
+            </div>
+        </div>
+
+        <div class="footer-info-col">
+            <h4 class="footer-heading">THÔNG TIN SINH VIÊN</h4>
+            <ul class="footer-list">
+                <li><span>Họ và tên</span> <strong>Đỗ Thành Duy</strong></li>
+                <li><span>Lớp học</span> <strong>DA24TTB</strong></li>
+                <li><span>Mã số SV</span> <strong>110124042</strong></li>
+            </ul>
+        </div>
+
+        <div class="footer-info-col">
+            <h4 class="footer-heading">LIÊN HỆ & HỖ TRỢ</h4>
+            <ul class="footer-list">
+                <li><span>Hotline</span> <strong>0846.623.306</strong></li>
+                <li><span>Email</span> <a href="mailto:thanhduy9693@gmail.com">thanhduy9693@gmail.com</a></li>
+                <li><span>Địa chỉ</span> <strong>Nhà Trọ 153, Khóm 3, Phường Hòa Thuận, Vĩnh Long</strong></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>© 2026 Designed & Developed by Do Thanh Duy. All rights reserved.</p>
+    </div>
+</footer>
+
+    <script src="../js/db.js"></script>
+    <script src="../js/script.js"></script>
+
+<div id="adminModal" class="modal-admin">
+
+    <div class="modal-content-admin">
+
+        <h3>Đăng nhập Admin</h3>
+        <p style="color:#64748b; font-size:14px;">
+         Mật khẩu demo: 123456</p>
+       <input
+       type="password"
+       id="adminPassword"
+       placeholder="Nhập mật khẩu">
+
+        <div class="modal-buttons">
+
+            <button
+                class="btn btn-danger"
+                onclick="dongAdminModal()">
+                Quay lại
+            </button>
+
+            <button
+                class="btn"
+                onclick="xacNhanAdmin()">
+                Xác nhận
+            </button>
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

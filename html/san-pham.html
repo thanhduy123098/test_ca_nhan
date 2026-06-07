@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản Phẩm - PhoneParts Studio</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="container header-container">
+        <div class="logo-box">
+            <a href="../index.html">
+                <img src="../assets/logo.png" alt="PhoneParts Studio Logo" class="logo">
+                <h1 class="shop-name">PHỤ KIỆN DUY THÀNH</h1>
+            </a>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Bạn cần tìm linh kiện gì?">
+            <button class="btn-search">
+                Tìm kiếm
+            </button>
+        </div>
+    </div>
+</header>
+
+    <nav class="main-nav">
+        <ul class="nav-links">
+            <li><a href="../index.html">Trang Chủ</a></li>
+            <li><a href="san-pham.html" class="active">Sản Phẩm</a></li>
+            <li><a href="gioi-thieu.html">Về chúng tôi</a></li>
+            <li><a href="lien-he.html">Liên Hệ</a></li>
+            <li><a href="#" onclick="kiemTraAdmin()">Quản Lý (Admin)</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="product-header">
+    <h2 style="margin: 0; color: #1e293b;">Danh Sách Linh Kiện & Phụ Kiện</h2>
+    
+    <div class="filter-box">
+        <label for="brandFilter">Lọc theo hãng:</label>
+        <select id="brandFilter" onchange="renderDanhSachSanPham(this.value)">
+            <option value="all">Tất cả sản phẩm</option>
+            <option value="Apple">Apple</option>
+            <option value="Samsung">Samsung</option>
+            <option value="Xiaomi">Xiaomi</option>
+            <option value="Baseus">Baseus</option>
+            <option value="JRC">JRC</option>
+            <option value="MFi">MFi</option>
+        </select>
+    </div>
+</div>
+        
+        <div class="product-grid" id="product-list">
+            </div>
+    </main>
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-brand-col">
+            <h3 class="footer-logo-text">PHỤ KIỆN DUY THÀNH</h3>
+            <p class="footer-slogan">Chuyên cung cấp linh kiện & phụ kiện điện thoại chính hãng. Đặt chất lượng và uy tín lên hàng đầu.</p>
+            <div class="social-links">
+                <a href="#" title="Facebook">FB</a>
+                <a href="#" title="Zalo">ZL</a>
+                <a href="#" title="Instagram">IG</a>
+                <a href="#" title="TikTok">TT</a>
+            </div>
+        </div>
+
+        <div class="footer-info-col">
+            <h4 class="footer-heading">THÔNG TIN SINH VIÊN</h4>
+            <ul class="footer-list">
+                <li><span>Họ và tên</span> <strong>Đỗ Thành Duy</strong></li>
+                <li><span>Lớp học</span> <strong>DA24TTB</strong></li>
+                <li><span>Mã số SV</span> <strong>110124042</strong></li>
+            </ul>
+        </div>
+
+        <div class="footer-info-col">
+            <h4 class="footer-heading">LIÊN HỆ & HỖ TRỢ</h4>
+            <ul class="footer-list">
+                <li><span>Hotline</span> <strong>0846.623.306</strong></li>
+                <li><span>Email</span> <a href="mailto:thanhduy9693@gmail.com">thanhduy9693@gmail.com</a></li>
+                <li><span>Địa chỉ</span> <strong>Nhà Trọ 153, Khóm 3, Phường Hòa Thuận, Vĩnh Long</strong></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>© 2026 Designed & Developed by Do Thanh Duy. All rights reserved.</p>
+    </div>
+</footer>
+
+
+    <script src="../js/db.js"></script>
+    <script src="../js/script.js"></script>
+
+    
+<div id="adminModal" class="modal-admin">
+
+    <div class="modal-content-admin">
+
+        <h3>Đăng nhập Admin</h3>
+        <p style="color:#64748b; font-size:14px;">
+         Mật khẩu demo: 123456</p>
+       <input
+       type="password"
+       id="adminPassword"
+       placeholder="Nhập mật khẩu">
+
+        <div class="modal-buttons">
+
+            <button
+                class="btn btn-danger"
+                onclick="dongAdminModal()">
+                Quay lại
+            </button>
+
+            <button
+                class="btn"
+                onclick="xacNhanAdmin()">
+                Xác nhận
+            </button>
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

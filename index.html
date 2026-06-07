@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhoneParts Studio - Chuyên Linh Kiện Điện Thoại</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="container header-container">
+        <div class="logo-box">
+            <a href="index.html">
+                <img src="assets/logo.png" alt="PhoneParts Studio Logo" class="logo">
+                <h1 class="shop-name">PHỤ KIỆN DUY THÀNH</h1>
+            </a>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Bạn cần tìm linh kiện gì?">
+            <button class="btn-search">
+                Tìm kiếm
+            </button>
+        </div>
+    </div>
+</header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html" class="active">Trang Chủ</a></li>
+                <li><a href="html/san-pham.html">Sản Phẩm</a></li>
+                <li><a href="html/gioi-thieu.html">Về Chúng Tôi</a></li>
+                <li><a href="html/lien-he.html">Liên Hệ</a></li>
+                <li><a href="#" onclick="kiemTraAdmin()">Quản Lý (Admin)</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        <h2 style="color: #1e3a8a; border-bottom: 2px solid #cbd5e1; padding-bottom: 10px; margin-bottom: 25px;">🔥 Sản Phẩm Nổi Bật</h2>
+
+        <div class="product-grid">
+            <div class="card">
+                <img src="https://fonesmart.com.vn/images/products/2023/09/24/large/thay-man-hinh-iphone-14-pro-max_1695526183.png" alt="Màn hình iPhone 14 Pro Max">
+                <div class="card-body">
+                    <h3>Màn hình iPhone 14 Pro Max (OLED)</h3>
+                    <div class="price">1.850.000 ₫</div>
+                    <a href="html/chi-tiet.html?id=1" class="btn">Xem chi tiết</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://cdni.dienthoaivui.com.vn/x420,webp,q100/https://media-asset.dienthoaivui.com.vn/uploads/wp-content/uploads/images/products/246733/thay-man-hinh-samsung-galaxy-s23-ultra-nguyen-khung-chinh-hang-gena-loai-a-plus-size-6-8-17721016848706.png" alt="Màn hình Samsung Galaxy S23">
+                <div class="card-body">
+                    <h3>Màn hình Samsung Galaxy S23 Ultra (AMOLED)</h3>
+                    <div class="price">1.450.000 ₫</div>
+                    <a href="html/chi-tiet.html?id=2" class="btn">Xem chi tiết</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://carek.vn/image/pin-iphone13-pisenchuan-caerk-vn-buxwgr3.jpg" alt="Pin iPhone 13">
+                <div class="card-body">
+                    <h3>Pin iPhone 13 (3227mAh)</h3>
+                    <div class="price">320.000 ₫</div>
+                    <a href="html/chi-tiet.html?id=3" class="btn">Xem chi tiết</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://cdni.dienthoaivui.com.vn/x,webp,q100/https://media-asset.dienthoaivui.com.vn/uploads/wp-content/uploads/images/products/233866/thay-pin-samsung-galaxy-a54-17481884859682.jpg" alt="Pin Samsung A54">
+                <div class="card-body">
+                    <h3>Pin Samsung Galaxy A54 (5000mAh)</h3>
+                    <div class="price">280.000 ₫</div>
+                    <a href="html/chi-tiet.html?id=4" class="btn">Xem chi tiết</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://ringkevietnam.com/wp-content/uploads/2023/09/op-lung-iphone-15-pro-max-ringke-silicone-magnetic-ringkevietnam-content-12.jpg" alt="Ốp lưng MagSafe">
+                <div class="card-body">
+                    <h3>Ốp lưng MagSafe iPhone 15 Pro (Silicon)</h3>
+                    <div class="price">150.000 ₫</div>
+                    <a href="html/chi-tiet.html?id=5" class="btn">Xem chi tiết</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://viendidong.com/wp-content/uploads/2022/04/cap-sac-acefast-type-c-to-lightning-1-2m-c3-01-den-viendidong-600x600.jpg" alt="Cáp sạc USB-C">
+                <div class="card-body">
+                    <h3>Cáp sạc USB-C to Lightning 1.2m (MFi)</h3>
+                    <div class="price">185.000 ₫</div>
+                    <a href="html/chi-tiet.html?id=6" class="btn">Xem chi tiết</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-brand-col">
+            <h3 class="footer-logo-text">PHỤ KIỆN DUY THÀNH</h3>
+            <p class="footer-slogan">Chuyên cung cấp linh kiện & phụ kiện điện thoại chính hãng. Đặt chất lượng và uy tín lên hàng đầu.</p>
+            <div class="social-links">
+                <a href="#" title="Facebook">FB</a>
+                <a href="#" title="Zalo">ZL</a>
+                <a href="#" title="Instagram">IG</a>
+                <a href="#" title="TikTok">TT</a>
+            </div>
+        </div>
+
+        <div class="footer-info-col">
+            <h4 class="footer-heading">THÔNG TIN SINH VIÊN</h4>
+            <ul class="footer-list">
+                <li><span>Họ và tên</span> <strong>Đỗ Thành Duy</strong></li>
+                <li><span>Lớp học</span> <strong>DA24TTB</strong></li>
+                <li><span>Mã số SV</span> <strong>110124042</strong></li>
+            </ul>
+        </div>
+
+        <div class="footer-info-col">
+            <h4 class="footer-heading">LIÊN HỆ & HỖ TRỢ</h4>
+            <ul class="footer-list">
+                <li><span>Hotline</span> <strong>0846.623.306</strong></li>
+                <li><span>Email</span> <a href="mailto:thanhduy9693@gmail.com">thanhduy9693@gmail.com</a></li>
+                <li><span>Địa chỉ</span> <strong>Nhà Trọ 153, Khóm 3, Phường Hòa Thuận, Vĩnh Long</strong></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>© 2026 Designed & Developed by Do Thanh Duy. All rights reserved.</p>
+    </div>
+</footer>
+
+<div id="adminModal" class="modal-admin">
+
+    <div class="modal-content-admin">
+        
+        <h3>Đăng nhập Admin</h3>
+        <p style="color:#64748b; font-size:14px;">Mật khẩu demo: 123456</p>
+        <input  type="password"  id="adminPassword" placeholder="Nhập mật khẩu">
+
+        <div class="modal-buttons">
+
+            <button
+                class="btn btn-danger"
+                onclick="dongAdminModal()">
+                Quay lại
+            </button>
+
+            <button
+                class="btn"
+                onclick="xacNhanAdmin()">
+                Xác nhận
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

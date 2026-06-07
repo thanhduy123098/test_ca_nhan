@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sản Phẩm - PhoneParts Studio</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="container header-container">
+        <div class="logo-box">
+            <a href="../index.html">
+                <img src="../assets/logo.png" alt="PhoneParts Studio Logo" class="logo">
+                <h1 class="shop-name">PHỤ KIỆN DUY THÀNH</h1>
+            </a>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Bạn cần tìm linh kiện gì?">
+            <button class="btn-search">
+                Tìm kiếm
+            </button>
+        </div>
+    </div>
+</header>
+
+    <nav class="main-nav">
+        <ul class="nav-links">
+            <li><a href="../index.html">Trang Chủ</a></li>
+            <li><a href="san-pham.html">Sản Phẩm</a></li>
+            <li><a href="gioi-thieu.html">Về chúng tôi</a></li>
+            <li><a href="lien-he.html">Liên Hệ</a></li>
+            <li><a href="#" onclick="kiemTraAdmin()">Quản Lý (Admin)</a></li>
+        </ul>
+    </nav>
+
+    <main class="container admin-layout">
+        <h2 style="color: #1e293b; border-bottom: 2px solid #ddd; padding-bottom: 10px;">Bảng Quản Trị Sản Phẩm</h2>
+        
+        <div style="overflow-x: auto;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Hình Ảnh</th>
+                        <th>Tên Sản Phẩm</th>
+                        <th>Giá Bán</th>
+                        <th>Trạng Thái</th>
+                        <th>Hành Động</th>
+                    </tr>
+                </thead>
+                <tbody id="adminTableBody">
+                    </tbody>
+            </table>
+        </div>
+
+        <h2 style="color: #1e293b; border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">Thêm / Sửa Sản Phẩm</h2>
+        <form id="adminForm">
+            <div class="contact-layout" style="grid-template-columns: 1fr 1fr;">
+                <div>
+                    <div class="form-group">
+                        <label for="adTen">Tên sản phẩm (*)</label>
+                        <input type="text" id="adTen" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="adGia">Giá bán (VNĐ) (*)</label>
+                        <input type="number" id="adGia" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="adThuongHieu">Thương hiệu</label>
+                        <input type="text" id="adThuongHieu" placeholder="VD: Apple, Samsung...">
+                    </div>
+                </div>
+
+                <div>
+                    <div class="form-group">
+                        <label for="adHinhAnh">Link ảnh đại diện (URL)</label>
+                        <input type="text" id="adHinhAnh" placeholder="https://...">
+                    </div>
+                    <div class="form-group">
+                        <label for="adMoTa">Mô tả ngắn</label>
+                        <textarea id="adMoTa" style="min-height: 105px;"></textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: right; margin-top: 15px;">
+                <button type="button" id="btnCancelEdit" class="btn btn-danger" style="display: none; margin-right: 10px;">Hủy Sửa</button>
+                <button type="submit" id="btnSubmitAdmin" class="btn">Thêm sản phẩm mới</button>
+            </div>
+        </form>
+
+    </main>
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-brand-col">
+            <h3 class="footer-logo-text">PHỤ KIỆN DUY THÀNH</h3>
+            <p class="footer-slogan">Chuyên cung cấp linh kiện & phụ kiện điện thoại chính hãng. Đặt chất lượng và uy tín lên hàng đầu.</p>
+            <div class="social-links">
+                <a href="#" title="Facebook">FB</a>
+                <a href="#" title="Zalo">ZL</a>
+                <a href="#" title="Instagram">IG</a>
+                <a href="#" title="TikTok">TT</a>
+            </div>
+        </div>
+
+        <div class="footer-info-col">
+            <h4 class="footer-heading">THÔNG TIN SINH VIÊN</h4>
+            <ul class="footer-list">
+                <li><span>Họ và tên</span> <strong>Đỗ Thành Duy</strong></li>
+                <li><span>Lớp học</span> <strong>DA24TTB</strong></li>
+                <li><span>Mã số SV</span> <strong>110124042</strong></li>
+            </ul>
+        </div>
+
+        <div class="footer-info-col">
+            <h4 class="footer-heading">LIÊN HỆ & HỖ TRỢ</h4>
+            <ul class="footer-list">
+                <li><span>Hotline</span> <strong>0846.623.306</strong></li>
+                <li><span>Email</span> <a href="mailto:thanhduy9693@gmail.com">thanhduy9693@gmail.com</a></li>
+                <li><span>Địa chỉ</span> <strong>Nhà Trọ 153, Khóm 3, Phường Hòa Thuận, Vĩnh Long</strong></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>© 2026 Designed & Developed by Do Thanh Duy. All rights reserved.</p>
+    </div>
+</footer>
+
+    <script src="../js/db.js"></script>
+    <script src="../js/script.js"></script>
+
+<div id="adminModal" class="modal-admin">
+
+    <div class="modal-content-admin">
+
+        <h3>Đăng nhập Admin</h3>
+        <p style="color:#64748b; font-size:14px;">
+         Mật khẩu demo: 123456</p>
+       <input
+       type="password"
+       id="adminPassword"
+       placeholder="Nhập mật khẩu">
+
+        <div class="modal-buttons">
+
+            <button
+                class="btn btn-danger"
+                onclick="dongAdminModal()">
+                Quay lại
+            </button>
+
+            <button
+                class="btn"
+                onclick="xacNhanAdmin()">
+                Xác nhận
+            </button>
+
+        </div>
+    </div>
+</div>
+
+</div>
+</body>
+</html>
